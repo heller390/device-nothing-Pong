@@ -126,7 +126,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">17</integer>
+    <integer name="config_screenBrightnessDoze">255</integer>
 
     <!-- Array of output values for LCD backlight corresponding to the lux values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -165,14 +165,70 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>10</item>
-        <item>30</item>
-        <item>60</item>
-        <item>100</item>
-        <item>150</item>
-        <item>210</item>
-        <item>255</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+        <item>15</item>
+        <item>20</item>
+        <item>33</item>
+        <item>55</item>
+        <item>90</item>
+        <item>148</item>
+        <item>245</item>
+        <item>403</item>
+        <item>665</item>
+        <item>1097</item>
+        <item>1808</item>
+        <item>3000</item>
+        <item>6000</item>
+        <item>9000</item>
+        <item>10000</item>
+        <item>14000</item>
+        <item>20000</item>
     </integer-array>
+
+     <!-- Array of desired screen brightness in nits corresponding to the lux values
+         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
+         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
+         brightness of an all-white image.
+
+         If this is defined then:
+            - config_autoBrightnessLcdBacklightValues should not be defined
+            - config_screenBrightnessNits must be defined
+            - config_screenBrightnessBacklight must be defined
+
+         This array should have size one greater than the size of the config_autoBrightnessLevels
+         array. The brightness values must be non-negative and non-decreasing. This must be
+         overridden in platform specific overlays -->
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>5.139055</item>
+        <item>9.962019</item>
+        <item>18.34823</item>
+        <item>21.550682</item>
+        <item>24.016779</item>
+        <item>32.5</item>
+        <item>46</item>
+        <item>53.26923</item>
+        <item>54.615383</item>
+        <item>58.115383</item>
+        <item>62.1394</item>
+        <item>67.13133</item>
+        <item>79.67614</item>
+        <item>98.04727</item>
+        <item>125.1222</item>
+        <item>161.68752</item>
+        <item>208.48856</item>
+        <item>264.82214</item>
+        <item>328.58694</item>
+        <item>627.4315</item>
+        <item>826.85846</item>
+        <item>867.04944</item>
+        <item>901.4497</item>
+        <item>1000.0</item>
+    </array>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
@@ -320,5 +376,29 @@
     <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
     <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
+
+     <string-array name="config_nightDisplayColorTemperatureCoefficients">
+       <item>0.0000000000</item>
+       <item>0.0000000000</item>
+       <item>1.0000000000</item>
+       <item>0.0000000000</item>
+       <item>0.0001636364</item>
+       <item>0.3352000000</item>
+       <item>0.0000000000</item>
+       <item>0.0003496503</item>
+       <item>-0.4376923077</item>
+    </string-array>
+
+    <string-array name="config_nightDisplayColorTemperatureCoefficientsNative">
+       <item>0.0000000000</item>
+       <item>0.0000000000</item>
+       <item>1.0000000000</item>
+       <item>0.0000000000</item>
+       <item>0.0001636364</item>
+       <item>0.3352000000</item>
+       <item>0.0000000000</item>
+       <item>0.0003496503</item>
+       <item>-0.4376923077</item>
+    </string-array>
 
 </resources>
