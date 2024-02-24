@@ -36,3 +36,6 @@ BUILD_FINGERPRINT := Nothing/Pong/Pong:12/SKQ1.230722.001/2401161446:user/releas
 
 # UDFPS animations
 EXTRA_UDFPS_ANIMATIONS := true
+
+# Boot animation resolution
+TARGET_BOOT_ANIMATION_RES := 1920
