@@ -330,7 +330,7 @@
     <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_touch</string>
 
     <!-- Whether to use Richtap vibration -->
-    <bool name="config_usesRichtapVibration">true</bool>
+    <bool name="config_usesRichtapVibration">false</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
